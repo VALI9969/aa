@@ -1,0 +1,31 @@
+O_SEC_APPR_STATUS:  not_yet_approved
+O_SEC_APPR_VALUE:  pre_release
+O_SEC_PERSON_COMPANY:   <name> Security Person Company
+O_SEC_APPR_COMPANY:   <name> Security Approver Company
+O_SEC_PERSON_COUNTRY:   <name> Security Person Country
+O_SEC_APPR_COUNTRY:  <name> Security Approver Country
+O_SEC_APPR_DATE_DATE:  11
+O_SEC_ASSIGN_DATE_DATE:  22
+O_SEC_APPR_DATE_OFFSET_DIR:  .behind.
+O_SEC_ASSIGN_DATE_OFFSET_DIR:  .ahead.
+O_SEC_APPR_DATE_HOUR:  13
+O_SEC_ASSIGN_DATE_HOUR:  23
+O_SEC_APPR_DATE_OFFSET_HOURS:  6
+O_SEC_ASSIGN_DATE_OFFSET_HOURS:  12
+O_SEC_PERSON_ID:  444-44-<num>
+O_SEC_APPR_ID:  676-66-<num>
+O_SEC_PERSON_FIRST_NAME:   <name> Security Person First Name
+O_SEC_PERSON_INITIAL:   <name> Security Person Initial
+O_SEC_PERSON_LAST_NAME:   <name> Security Person Last Name
+O_SEC_APPR_FIRST_NAME:   <name> Security Approver First Name
+O_SEC_APPR_INITIAL:   <name> Security Approver Initial
+O_SEC_APPR_LAST_NAME:   <name> Security Approver Last Name
+O_SEC_LEVEL:  proprietary
+O_SEC_APPR_DATE_MINUTE:  23
+O_SEC_ASSIGN_DATE_MINUTE:  43
+O_SEC_APPR_DATE_MONTH:  2
+O_SEC_ASSIGN_DATE_MONTH:  8
+O_SEC_PERSON_PHONE:  (404) 404-<num>
+O_SEC_APPR_PHONE:  (606) 606-<num>
+O_SEC_APPR_DATE_YEAR:  1980
+O_SEC_ASSIGN_DATE_YEAR:  1986

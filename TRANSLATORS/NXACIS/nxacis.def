@@ -1,0 +1,7 @@
+Simplify=off
+Heal_Bodies=off
+Optimize=off
+Sew_Surfaces_Automatically=off
+Convert_Independent_Wireframe=on
+Convert_ACIS_Files_To=millimeters
+ACIS_Version=R22

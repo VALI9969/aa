@@ -1,0 +1,28 @@
+!
+!  otpub.men:  Open Tools Publish menu file.
+!
+!  This menu defines a cascading "Send To" menu that is placed under the 
+!  print/plot group of the main menubar.
+!
+!  Place this file in the OTPUB kit's "startup" directory.
+!
+! 
+!
+VERSION 120
+
+EDIT UG_GATEWAY_MAIN_MENUBAR
+
+MODIFY 
+  APPLICATION_BUTTON/HIDE UG_APP_NOPART
+  MENU_FILES otpub_nopart.men
+END_OF_MODIFY
+
+AFTER UG_FILE_PLOT
+   BUTTON XPRESREVIEW
+   LABEL Send to Pac&kage File
+   TOOLBAR_LABEL Send to Package File
+   MESSAGE Creates a lightweight, high-fidelity representation of the part's model and drawings, which allows colleagues, suppliers, and others to view, mark up, and collaborate on the data without having NX installed.
+   HINT This command is available in native NX when XpresReview is installed.
+   ACTIONS OTPUB__action_viewer
+END_OF_AFTER
+

@@ -1,0 +1,13 @@
+!
+! Open Tools Publish menu file.  Hide's the OTPUB menu button whenever there
+! is no active part in the session.
+!
+! Place this file in the OTPUB kit's "application" directory.
+!
+! 
+!
+VERSION 120
+
+EDIT UG_GATEWAY_MAIN_MENUBAR
+
+HIDE XPRESREVIEW

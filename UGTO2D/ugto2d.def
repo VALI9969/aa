@@ -1,0 +1,192 @@
+!==============================================================================
+!             Copyright (c) 2006 Unigraphics Solutions Inc.
+!                     Unpublished - All rights reserved
+!==============================================================================
+!
+! FILE : ugto2d.def
+!
+! DESCRIPTION
+!
+!   Defaults (settings) file that contains parameters that initialize member
+!   variables that govern the conversion process.
+!
+!   To activate a Keyword, uncomment it and assign it a value.
+!
+!   Keywords include :
+!
+!     INPUT_PARTS_DIR      - Specifies the directory where all input parts reside
+!     OUTPUT_PARTS_DIR     - Specifies the destination directory
+!     INPUT_PARTS_LIST     - Comma separated list of parts to be processed
+!     OUTPUT_PARTS_LIST    - Comma separated list of output part names
+!     DEFAULT_CNV_MODE     - Specifies Output to modeling or drafting
+!     DEFAULT_DRAWING_CNV  - Specifies whether all or current drawing should be
+!                            processed when no cmdline option is given.
+!     ASSEM_OPTIONS        - Fully qualified pathname of the load_options.def
+!                            file to be used for the translation.
+!     CONVERT_FACET_BODIES - When set to "no" will ignore facet bodies.
+!                            The default ("yes") will ensure that facet
+!                            bodies are converted.
+!     DATA_REDUCTION       - When set to "yes", points, lines, arcs, and 
+!                            ellipses that overlap in the 2D part are trimmed
+!                            or removed completely to eliminate the overlap.
+!     UGI_DRAWING_NAMES    - Specifies comma separated list of drawings
+!                            or removed completely to eliminate the overlap.
+!     UGI_EXPORT_ALL_DRAWINGS_TO_ONE_PART -When set to "yes" All the drawings will 
+!                            translated to single part. When set to "no" one part
+!                            per drawing will be created. Setting is applicable
+!                            when the output is to drafting
+!     UGI_VIEW_NAME        - Specifes the name of view to be translated.
+!     LOG_FILE             - Specifies the name of the log file.
+!     CONVERT_DIM_AS_GROUP - Convert the dimension as grouped data or real dims
+!     CONVERT_CROSSHATCH_AS_GEOMETRY  - Convert cross hatches as real or non-associative cross hatches
+!     CONVERT_ANNOT_AS_GROUP          - This contains the comma-seperated list of annotation
+!                                       name(s) that are to be exported as grouped geometry.
+!
+!
+!   Lines beginning with '!' or lacking a known KEYWORD are considered comments
+!
+!   If the last non whitespace character on a line is one of the continuation
+!   character '&' or ',', then the next line will be concatenated.  Lines may
+!   be of any length.  Lines delimited by the '\n' character are concatenated.
+!
+!==============================================================================
+ 
+!==============================================================================
+! Specify the "source" directory which contains the input part(s)
+! Example: INPUT_PARTS_DIR = d:\parts_to_convert\
+!==============================================================================
+INPUT_PARTS_DIR = 
+
+!==============================================================================
+! Specify the "destination" directory to write output part(s) to when the output
+! directory is not explicitly provided on the command line.
+! Example: OUTPUT_PARTS_DIR = e:\converted_parts\
+!
+! The default, OUTPUT_TO_CURR_DIR, writes parts to the current directory. Not
+! providing a value has the same effect.
+!
+! To write parts to the input part's directory, use OUTPUT_TO_INPUT_DIR. 
+! Example: OUTPUT_PARTS_DIR = OUTPUT_TO_INPUT_DIR
+!==============================================================================
+OUTPUT_PARTS_DIR = OUTPUT_TO_CURR_DIR
+
+!==============================================================================
+! List the input part(s) to be processed (separated by commas)
+! Example: INPUT_PARTS_LIST = a.prt, b.prt, c.prt
+!==============================================================================
+INPUT_PARTS_LIST =
+
+!==============================================================================
+! List the output part(s) to create (separated by commas)
+! Example: OUTPUT_PARTS_LIST = a_2d.prt, b_2d.prt, c_2d.prt
+!==============================================================================
+OUTPUT_PARTS_LIST = 
+
+!==============================================================================
+! Specify whether the 2D output data will be generated in the MODELING
+! application or in the DRAFTING application.  Default is MODELING.
+! Example: DEFAULT_CNV_MODE = MODELING
+!==============================================================================
+DEFAULT_CNV_MODE =
+
+!==============================================================================
+! Specify whether just the CURRENT drawing should be processed or whether _ALL_
+! drawings should be processed.  Default is CURRENT.
+! Example: DEFAULT_DRAWING_CNV = _ALL_
+!==============================================================================
+DEFAULT_DRAWING_CNV = 
+
+!==============================================================================
+! Specify the file governing assembly and component behavior for translations.
+! Example: ASSEM_OPTIONS = c:\version_num\my_options\load_options.def
+!==============================================================================
+ASSEM_OPTIONS = 
+
+!==============================================================================
+! This option controls whether facet bodies are converted.  The default ("yes")
+! will ensure that facet bodies are converted.
+! Valid options are:  [yes, no]
+!==============================================================================
+CONVERT_FACET_BODIES = yes
+
+!==============================================================================
+! This option controls whether overlapping points, lines, arcs, and ellipses
+! are trimmed or removed to eliminate the overlap. The default is "no".
+! Valid options are:  [yes, no]
+!==============================================================================
+DATA_REDUCTION = no
+
+! This option controls whether to extract the 3D model edges. Setting this to
+! yes improves the translation in some cases.
+! Valid options are:  [yes, no]
+!==============================================================================
+USE_EXTRACTED_EDGES = no
+
+! This option is to specify comma separated list of drawing sheet names so as to
+! enable translation of multiple drawings
+! Example UGI_DRAWING_NAMES = Sheet 1 ,Sheet 3 
+! In the above example "Sheet 1" and "Sheet 3" are the names of the 
+! sheets to be translated 
+!==============================================================================
+UGI_DRAWING_NAMES = 
+
+! This option is to specify whether to translate all the drawing sheets into
+! one part or to create separate part for each drawing
+! Example UGI_EXPORT_ALL_DRAWINGS_TO_ONE_PART = yes
+! In the above example all the drawings will be traslated to one part
+! if the variable is set to no then separate parts will be created for each
+! individual drawing. This option exists for output to drafting only
+!==============================================================================
+UGI_EXPORT_ALL_DRAWINGS_TO_ONE_PART = yes
+
+! This option is  to specify the name of view to translate.
+! Example UGI_VIEW_NAME = TOP
+! In above example, "TOP" is the name of view to be translated
+!==============================================================================
+UGI_VIEW_NAME = 
+
+!This option is to specify the name of the log file.
+!Name could be complete pathname, as - D:\directory\abc.log
+!OR it could be just file name, as - abc.log
+!==============================================================================
+LOG_FILE = 
+
+!==============================================================================
+! This option controls whether dimensions are converted to dimensions
+! ("no") or to individual pieces of geometry and text that are grouped 
+! together ("yes"). The default is "no".
+! Valid options are:  [yes, no]
+!==============================================================================
+CONVERT_DIM_AS_GROUP = no
+
+!==============================================================================
+! This option controls whether cross-hatches are converted as real
+! ("no") or as geometry ("yes"). The default is "no".
+! Valid options are:  [yes, no]
+!==============================================================================
+CONVERT_CROSSHATCH_AS_GEOMETRY  = no
+
+!==============================================================================
+! If, with default options, exported annotations have incorrect display, exporting  
+! such annotations as grouped geometry will provide the correct display. Using 
+! this option specific annotation(s) can be exported as grouped geometry. 
+! A comma-seperated list (no spaces) of annotation names (one or more) 
+! must be written, that are intended to be exported as grouped geometry.
+!         Valid options are:  [NOTE,GDT,BALLOON,LABEL,FCF,DFS,SFS,
+!                             DATUMTARGET,WELD,PMIURLNOTE,PMINUMBERNOTE,
+!                             PMIINTEGERNOTE,PMISTRINGNOTE,PMISPECIFICNOTE,
+!                             PMIGOVTSECURITYINFO, PMIEXPORTCONTROLNOTE, 
+!                             PMICOMPANYPROPINFO]
+! 
+!   For example: NOTEs, GDTs, and FCFs can be exported as grouped geometry 
+!   using this keyword in following way:
+!   CONVERT_ANNOT_AS_GROUP =NOTE,GDT,FCF
+!
+!   By default, this keyword does not have any value.
+!==============================================================================
+CONVERT_ANNOT_AS_GROUP =
+
+
+
+
+
